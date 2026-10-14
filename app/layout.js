@@ -1,9 +1,10 @@
-import { Outfit } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  weight: ["300", "400", "600", "700", "800", "900"],
+  variable: "--font-nunito-sans",
 });
 
 export const metadata = {
@@ -13,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${outfit.variable}`}>
+    <html lang="en" className={`${nunitoSans.variable}`}>
       <body>{children}</body>
     </html>
   );
